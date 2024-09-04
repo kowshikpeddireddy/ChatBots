@@ -25,7 +25,7 @@ qa_prompt = ChatPromptTemplate.from_messages ( [
 final_chain = (qa_prompt | llm)
 
 # Streamlit UI
-st.title ( "AI Chat Assistant" )
+st.title ( "Kowshik's AI Chat Assistant" )
 
 if 'chat_history' not in st.session_state:
     st.session_state.chat_history = []
