@@ -1,12 +1,10 @@
 import streamlit as st
-from dotenv import load_dotenv
+
 from langchain_core.messages import HumanMessage, AIMessage
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-# Load environment variables
-load_dotenv ()
-llm = ChatGoogleGenerativeAI ( model="gemini-1.5-flash" )
+llm = ChatGoogleGenerativeAI ( model="gemini-1.5-flash", api_key="AIzaSyDhYcCutSjIBaKK6-YeY3xVyIZzLbq9yrI" )
 
 qa_system_prompt = """You are a helpful AI assistant. Your goal is to provide accurate and relevant answers based on the user's latest question and the previous chat history. 
 
